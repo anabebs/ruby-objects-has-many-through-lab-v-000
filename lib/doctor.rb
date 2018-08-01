@@ -19,7 +19,7 @@ class Doctor
     @appointments << app 
   end
   
-appointment = doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
+
 
   def appointments
     @appointments
