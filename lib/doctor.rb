@@ -3,7 +3,7 @@ class Doctor
    @@all = []
    def initialize(name)
     @name = name
-    @@all_doc << self
+    @@all << self
   end
    def self.all
     @@all
