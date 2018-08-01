@@ -12,7 +12,7 @@ class Doctor
   def self.all
     @@all
   end
-  binding.pry
+  
   
   def add_appointment(appointment)
     @appointments << appointment
