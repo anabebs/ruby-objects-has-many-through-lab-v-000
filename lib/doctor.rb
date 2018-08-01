@@ -19,13 +19,7 @@ class Doctor
     @appointments << app 
   end
   
-  def new_song(name,genre)
-    
-    s= Song.new(name, self, genre)
-    
-    @songs << s 
-    s 
-  end
+
 
   def appointments
     @appointments
