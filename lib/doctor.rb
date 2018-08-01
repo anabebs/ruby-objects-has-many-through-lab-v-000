@@ -20,6 +20,7 @@ class Doctor
     app = doc.new(pat,date)
     @appointments << app 
   end
+  binding.pry
   
 
 
