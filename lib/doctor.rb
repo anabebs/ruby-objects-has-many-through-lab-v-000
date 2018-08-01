@@ -16,7 +16,7 @@ class Doctor
   
   def new_appointment(patient, date)
     app = appointment.new(patient,self,date)
-    appointments.self = self
+    @appointments << app 
   end
   
   def new_song(name,genre)
