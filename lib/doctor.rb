@@ -1,36 +1,27 @@
-require "pry"
-class Doctor
-  attr_accessor :name
-  attr_reader :appointments
-   @@all = []
-  def initialize(name)
+lass Doctor
+   attr_reader :name, :appointment, :patient
+   @@all_doc = []
+   def initialize(name)
     @name = name
-    @appointments = []
-     @@all << self
+    @@all_doc << self
   end
-
-  def self.all
-    @@all
+   def self.all
+    @@all_doc
   end
-  
-  
-  def new_appointment(date, patient)
-    doc =Doctor.new(name)
-    pat = Patient.new(patient)
-    app = doc.new(pat,date)
-    @appointments << app 
+   def new_appointment(patient, date)
+    Appointment.new(patient, self, date)
   end
-  binding.pry
-  
-
-
-
-  def appointments
-    @appointments
+   def appointments
+    Appointment.all.select do |appointment|
+      appointment.doctor == self
+    end
   end
-
-  def patients
-    @appointments.collect { |appointment| appointment.patient }
+   def patients
+    appointments.map do |appointment|
+      appointment.patients
+    end
   end
-end
+ end
+
+
 
