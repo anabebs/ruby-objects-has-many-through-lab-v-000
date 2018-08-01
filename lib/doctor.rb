@@ -15,11 +15,11 @@ class Doctor
   
   
   def new_appointment(date, patient)
-    app = appointment.new(patient,self,date)
+    app = self.new_appointment(patient,date)
     @appointments << app 
   end
   
-
+appointment = doctor_who.new_appointment(hevydevy, "Friday, January 32nd")
 
   def appointments
     @appointments
